@@ -21,6 +21,18 @@ ZAPI_TOKEN=
 ZAPI_CLIENT_TOKEN=
 ```
 
+## Database Setup
+
+```sql
+create table contatos (
+    id bigint generated always as identity primary key,
+    nome_contato text not null,
+    numero_contato text not null
+);
+```
+
+Create a SELECT policy for the `contatos` table if RLS is enabled.
+
 ## Instalação
 
 ```bash
@@ -36,6 +48,6 @@ python main.py
 ## Status
 
 - [x] Estrutura inicial do projeto
-- [ ] Integração com Supabase
+- [x] Integração com Supabase
 - [ ] Integração com Z-API
 - [ ] Envio de mensagens personalizadas

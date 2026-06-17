@@ -1,11 +1,17 @@
-from config import (
-    SUPABASE_URL,
-    SUPABASE_KEY,
-    ZAPI_INSTANCE_ID,
-    ZAPI_TOKEN,
-)
+from services.supabase_service import get_contacts
 
-print("Projeto iniciado")
 
-print(f"Supabase URL: {SUPABASE_URL}")
-print(f"Instance ID: {ZAPI_INSTANCE_ID}")
+def main():
+    contacts = get_contacts()
+
+    print(f"Found {len(contacts)} contacts\n")
+
+    for contact in contacts:
+        print(
+            f"{contact['nome_contato']} - "
+            f"{contact['numero_contato']}"
+        )
+
+
+if __name__ == "__main__":
+    main()
