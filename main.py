@@ -1,16 +1,11 @@
-from services.supabase_service import get_contacts
+from services.zapi_service import send_message
 
 
 def main():
-    contacts = get_contacts()
-
-    print(f"Found {len(contacts)} contacts\n")
-
-    for contact in contacts:
-        print(
-            f"{contact['nome_contato']} - "
-            f"{contact['numero_contato']}"
-        )
+    send_message(
+        "5555997211544",
+        "Teste da integração Z-API"
+    )
 
 
 if __name__ == "__main__":
