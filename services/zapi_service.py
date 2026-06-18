@@ -29,7 +29,4 @@ def send_message(phone: str, message: str):
         headers=headers
     )
 
-    print(response.status_code)
-    print(response.text)
-
     return response

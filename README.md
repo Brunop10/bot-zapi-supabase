@@ -44,10 +44,3 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-
-## Status
-
-- [x] Estrutura inicial do projeto
-- [x] Integração com Supabase
-- [ ] Integração com Z-API
-- [ ] Envio de mensagens personalizadas
